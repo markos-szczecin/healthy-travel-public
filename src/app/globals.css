@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    .btn-nav {
+        min-width: 185px;
+    }
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    button:disabled,
+    button[disabled], button[disabled]:hover {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+    }
+
+    .record-secton {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+
+        div {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+    }
+
+    .record-button {
+        margin: 10px 0;
+    }
+
+    .proposals-table-wrapper {
+        display: flex;
+        justify-content: center;
+
+        table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+            width: auto;
+        }
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+.data-response {
+    h2 {
+        font-size: 22px;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    hr {
+        margin: 10px 0;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    ul {
+        margin-left: 20px;
+        list-style: disc;
+
+        li {
+            margin: 5px 0;
+        }
+    }
+}
